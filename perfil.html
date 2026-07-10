@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <title>BusMap - Perfil</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="menu.html" class="logo">BusMap</a>
+        <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="mapa.html">Mapa</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="index.html">Salir</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor">
+        <h2>Mi perfil</h2>
+
+        <div class="tarjeta">
+            <p><strong>Nombre:</strong> Usuario de prueba</p>
+            <p><strong>Correo:</strong> usuario@ejemplo.com</p>
+        </div>
+
+        <h3>Rutas favoritas</h3>
+        <ul class="lista-reportes">
+            <li>San Jose - Cartago</li>
+            <li>San Jose - Heredia</li>
+        </ul>
+
+        <h3>Historial de reportes</h3>
+        <ul class="lista-reportes" id="listaHistorial"></ul>
+
+        <h3>Configuracion de la cuenta</h3>
+        <div class="formulario" style="max-width: 100%;">
+            <label for="nombrePerfil">Nombre</label>
+            <input type="text" id="nombrePerfil" value="Usuario de prueba">
+
+            <label for="correoPerfil">Correo</label>
+            <input type="text" id="correoPerfil" value="usuario@ejemplo.com">
+
+            <label>
+                <input type="checkbox" id="notificaciones" checked style="width: auto; display: inline;">
+                Recibir notificaciones de mis rutas favoritas
+            </label>
+
+            <button class="boton" onclick="guardarPerfil();">Guardar cambios</button>
+            <div id="mensajePerfil"></div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        BusMap - Proyecto SC-502, Universidad Fidelitas
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        cargarHistorial();
+    </script>
+</body>
+
+</html>

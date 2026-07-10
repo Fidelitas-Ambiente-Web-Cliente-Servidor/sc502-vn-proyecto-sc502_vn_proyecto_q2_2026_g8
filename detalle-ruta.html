@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <title>BusMap - Detalle de ruta</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="menu.html" class="logo">BusMap</a>
+        <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="mapa.html">Mapa</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="index.html">Salir</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor">
+        <h2>Detalle de ruta</h2>
+
+        <div class="tarjeta">
+            <h3>San Jose - Cartago</h3>
+            <p>Ultimo avistamiento del bus: hace 4 minutos, en la parada de Tres Rios.</p>
+            <p>Estado actual: retraso leve reportado por 2 usuarios.</p>
+
+            <div class="votos">
+                <button onclick="votar('contadorLikes', 'like');">Me sirvio (<span id="contadorLikes">5</span>)</button>
+                <button onclick="votar('contadorLikes', 'dislike');">No es correcto</button>
+            </div>
+        </div>
+
+        <button class="boton" onclick="mostrarFormularioReporte();">Reportar incidente</button>
+
+        <div id="formularioReporte" class="formulario" style="display: none;">
+            <h3>Nuevo reporte para esta ruta</h3>
+
+            <label for="tipoIncidente">Tipo de incidente</label>
+            <select id="tipoIncidente">
+                <option value="">Seleccione...</option>
+                <option value="retraso">Retraso</option>
+                <option value="avistamiento">Avistamiento del bus</option>
+                <option value="accidente">Accidente</option>
+            </select>
+
+            <label for="comentarioReporte">Comentario</label>
+            <textarea id="comentarioReporte" placeholder="Describa lo que observo"></textarea>
+
+            <button class="boton" onclick="enviarReporte();">Enviar reporte</button>
+            <div id="mensajeReporte"></div>
+        </div>
+
+        <h3 style="margin-top: 25px;">Indicadores recientes</h3>
+        <ul class="lista-reportes">
+            <li>Bus visto en parada Tres Rios<span class="fecha-reporte">Hoy, 10:32 am</span></li>
+            <li>Retraso de 10 minutos reportado<span class="fecha-reporte">Hoy, 09:50 am</span></li>
+            <li>Ruta sin novedades<span class="fecha-reporte">Ayer, 06:15 pm</span></li>
+        </ul>
+
+    </div>
+
+    <div class="footer">
+        BusMap - Proyecto SC-502, Universidad Fidelitas
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
