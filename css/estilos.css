@@ -1,1 +1,264 @@
 
+
+/* Estilos generales BusMap */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  color: #333333;
+}
+
+/* Barra de navegacion */
+.navbar {
+  background-color: #1e5aa8;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar .logo {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar ul li {
+  margin-left: 15px;
+}
+
+.navbar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor principal */
+.contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Bienvenida / hero simple */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  color: #1e5aa8;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Botones */
+.boton {
+  display: inline-block;
+  background-color: #1e5aa8;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.boton:hover {
+  background-color: #164786;
+}
+
+.boton-secundario {
+  background-color: #ffffff;
+  color: #1e5aa8;
+  border: 1px solid #1e5aa8;
+}
+
+.boton-secundario:hover {
+  background-color: #e8f0fb;
+}
+
+/* Tarjetas (para funciones, reportes, etc.) */
+.tarjeta {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.tarjetas-grupo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.tarjetas-grupo .tarjeta {
+  flex: 1 1 250px;
+}
+
+/* Formularios */
+.formulario {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.formulario label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.formulario textarea {
+  resize: vertical;
+  height: 70px;
+}
+
+.formulario .boton {
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.enlace-formulario {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.mensaje-error {
+  color: #cc0000;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.mensaje-exito {
+  color: #1e7a1e;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* Mapa (placeholder, sin integracion real todavia) */
+.mapa-placeholder {
+  background-color: #cfe0f2;
+  border: 1px solid #a9c4e0;
+  border-radius: 4px;
+  height: 280px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.pin {
+  position: absolute;
+  background-color: #cc3b3b;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Listas de reportes / historial */
+.lista-reportes {
+  list-style: none;
+}
+
+.lista-reportes li {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.lista-reportes li .fecha-reporte {
+  color: #777777;
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;
+}
+
+/* Likes y dislikes */
+.votos {
+  margin-top: 8px;
+}
+
+.votos button {
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.votos button:hover {
+  background-color: #dddddd;
+}
+
+/* Footer simple */
+.footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+  color: #888888;
+}
+
+/* Ajuste para pantallas pequenas */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    margin-top: 10px;
+  }
+
+  .navbar ul li {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
